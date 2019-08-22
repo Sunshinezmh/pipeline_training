@@ -19,7 +19,7 @@ stages:
       buildContext: .
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: 47.107.157.185:31803
+      registry: 192.168.22.246:8081
     env:
       PLUGIN_INSECURE: "true"
       PLUGIN_MIRROR: http://sonatype-nexus-service.sonatype-nexus:8083
@@ -27,3 +27,4 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+notification: {}
